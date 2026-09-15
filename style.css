@@ -1,0 +1,113 @@
+:root {
+  --color-bg-page:    #f0f2f5;
+  --color-bg-card:    #ffffff;
+  --color-accent:     #1a56db;
+  --color-text-loud:  #111827;
+  --color-text-quiet: #6b7280;
+  --color-status-paid-bg:   #d1fae5;
+  --color-status-paid-text: #065f46;
+  --color-status-failed-bg:   #fee2e2;
+  --color-status-failed-text: #991b1b;
+
+  --size-amount:  2.75rem;
+  --size-heading: 0.875rem;
+  --size-body:    1rem;
+  --size-detail:  0.8125rem;
+}
+
+/* ── page ─────────────────────────────────────── */
+
+body {
+  background-color: var(--color-bg-page);
+  font-family: system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* ── card shell ───────────────────────────────── */
+
+.card {
+  background-color: var(--color-bg-card);
+  width: 360px;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ── heading ──────────────────────────────────── */
+
+.card__heading {
+  color: var(--color-text-quiet);
+  font-size: var(--size-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 1rem;
+}
+
+/* ── amount ───────────────────────────────────── */
+
+.card__amount {
+  color: var(--color-text-loud);
+  font-size: var(--size-amount);
+  font-weight: 700;
+  text-align: left;
+  margin: 0 0 1rem;
+  line-height: 1.1;
+}
+
+/* ── status badge ─────────────────────────────── */
+
+.card__status {
+  display: inline-block;
+  font-size: var(--size-detail);
+  font-weight: 600;
+  padding: 0.2em 0.7em;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+
+.card__status--paid {
+  background-color: var(--color-status-paid-bg);
+  color: var(--color-status-paid-text);
+}
+
+.card__status--failed {
+  background-color: var(--color-status-failed-bg);
+  color: var(--color-status-failed-text);
+}
+
+/* ── detail rows ──────────────────────────────── */
+
+.card__details {
+  border-top: 1px solid #e5e7eb;
+  margin: 0;
+  padding-top: 1rem;
+}
+
+.card__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.625rem;
+}
+
+.card__row:last-child {
+  margin-bottom: 0;
+}
+
+.card__label {
+  color: var(--color-text-quiet);
+  font-size: var(--size-detail);
+  font-weight: 400;
+}
+
+.card__value {
+  color: var(--color-text-loud);
+  font-size: var(--size-detail);
+  font-weight: 500;
+  text-align: right;
+  margin: 0;
+}
