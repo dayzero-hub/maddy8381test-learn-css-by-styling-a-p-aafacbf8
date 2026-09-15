@@ -8,6 +8,7 @@
   --color-status-paid-text: #065f46;
   --color-status-failed-bg:   #fee2e2;
   --color-status-failed-text: #991b1b;
+  --color-border: #e5e7eb;
 
   --size-amount:  2.75rem;
   --size-heading: 0.875rem;
@@ -20,11 +21,10 @@
 body {
   background-color: var(--color-bg-page);
   font-family: system-ui, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   margin: 0;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 /* ── card shell ───────────────────────────────── */
@@ -32,6 +32,8 @@ body {
 .card {
   background-color: var(--color-bg-card);
   width: 360px;
+  max-width: 100%;
+  margin: 0 auto;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
@@ -83,15 +85,14 @@ body {
 /* ── detail rows ──────────────────────────────── */
 
 .card__details {
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--color-border);
   margin: 0;
   padding-top: 1rem;
 }
 
 .card__row {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 0.625rem;
+  overflow: hidden;
 }
 
 .card__row:last-child {
@@ -102,12 +103,13 @@ body {
   color: var(--color-text-quiet);
   font-size: var(--size-detail);
   font-weight: 400;
+  float: left;
 }
 
 .card__value {
   color: var(--color-text-loud);
   font-size: var(--size-detail);
   font-weight: 500;
-  text-align: right;
+  float: right;
   margin: 0;
 }
