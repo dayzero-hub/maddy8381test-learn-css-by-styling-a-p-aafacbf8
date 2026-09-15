@@ -9,6 +9,7 @@
   --color-status-failed-bg:   #fee2e2;
   --color-status-failed-text: #991b1b;
   --color-border: #e5e7eb;
+  --color-accent-hover: #1648c0;
 
   --size-amount:  2.75rem;
   --size-heading: 0.875rem;
@@ -159,5 +160,5 @@ body {
 }
 
 .card__action:hover {
-  background-color: #1648c0;
+  background-color: var(--color-accent-hover);
 }
