@@ -62,15 +62,24 @@ body {
   margin: 0 0 var(--space-md);
 }
 
+/* ── amount row ───────────────────────────────── */
+
+/* block container so the row sits on its own line, below the heading */
+.card__amount-row {
+  margin-bottom: var(--space-md);
+}
+
 /* ── amount ───────────────────────────────────── */
 
+/* inline-block so the badge can sit beside it in normal flow */
 .card__amount {
+  display: inline-block;
   color: var(--color-text-loud);
   font-size: var(--size-amount);
   font-weight: 700;
-  text-align: left;
-  margin: 0 0 var(--space-md);
+  margin: 0 var(--space-sm) 0 0;
   line-height: 1.1;
+  vertical-align: middle;
 }
 
 /* ── status badge ─────────────────────────────── */
@@ -81,7 +90,14 @@ body {
   font-weight: 600;
   padding: 0.2em 0.7em;
   border-radius: 999px;
-  margin-bottom: var(--space-lg);
+  vertical-align: middle;
+}
+
+/* ── refunded note ────────────────────────────── */
+
+/* display: none removes it from the flow entirely — no gap left behind */
+.card__refunded {
+  display: none;
 }
 
 .card__status--paid {
